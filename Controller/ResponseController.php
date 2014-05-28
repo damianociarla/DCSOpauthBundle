@@ -42,9 +42,9 @@ class ResponseController extends Controller
                 } else {
                     // Check if route exists
                     try {
-                        $url = $this->generateUrl($routeName);
+                        $url = $this->generateUrl($routeRedirect);
                     } catch (RouteNotFoundException $e) {
-                        $url = $routeName;
+                        $url = $routeRedirect;
                     }
                 }
                 // Create default response
