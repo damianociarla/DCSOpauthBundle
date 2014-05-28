@@ -19,7 +19,7 @@ This is an example of the Facebook strategy:
 
     bash $ php composer.phar require opauth/facebook
 
-### b) Enable the bundle
+### c) Enable the bundle
 
 To enable it add the bundle instance in the kernel:
 
@@ -34,7 +34,7 @@ To enable it add the bundle instance in the kernel:
     	);
 	}
 
-### c) Configure the bundle
+### d) Configure the bundle
 
 Now that you have properly enabled the DCSOpauthBundle, the next step is to configure the bundle to work with the specific needs of your application.
 
@@ -60,7 +60,7 @@ Add the following configuration to your config.yml file according the types of s
 
 For a list of the configurations of the strategies refer to the original configuration of Opauth library.
 
-### d) Import DCSOpauthBundle routing files
+### e) Import DCSOpauthBundle routing files
 
 Now that you have activated and configured the bundle, all that is left to do is import the DCSOpauthBundle routing files:
 
