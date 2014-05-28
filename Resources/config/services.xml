@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="dcs_opauth.configuration.strategy_parser.default.class">DCS\OpauthBundle\Configuration\StrategyParser</parameter>
+        <parameter key="dcs_opauth.response.response_parser.default.class">DCS\OpauthBundle\Response\ResponseParser</parameter>
+        <parameter key="dcs_opauth.security.authenticator.default.class">DCS\OpauthBundle\Security\Authenticator</parameter>
+    </parameters>
+
+    <services>
+        <service id="dcs_opauth.configuration.strategy_parser.default" class="%dcs_opauth.configuration.strategy_parser.default.class%">
+            <argument type="service" id="router" />
+            <argument>%dcs_opauth.call_params%</argument>
+            <argument>%dcs_opauth.strategies%</argument>
+        </service>
+        <service id="dcs_opauth.response.response_parser.default" class="%dcs_opauth.response.response_parser.default.class%" />
+        <service id="dcs_opauth.security.authenticator.default" class="%dcs_opauth.security.authenticator.default.class%">
+            <argument type="service" id="security.context" />
+            <argument>%dcs_opauth.authentication_roles%</argument>
+        </service>
+    </services>
+</container>

@@ -1,0 +1,26 @@
+{
+    "name": "damianociarla/opauth-bundle",
+    "description": "DCSOpauthBundle is a Symfony2 bundle that enables support for many authentication providers through the Opauth framework",
+    "type": "library",
+    "keywords": [
+        "symfony2","opauth","oauth","oauth2","framework"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/damianociarla/DCSOpauthBundle",
+    "authors": [
+        {
+            "name": "Damiano Ciarla",
+            "email": "damiano.ciarla@gmail.com",
+            "homepage": "http://www.damianociarla.it/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "symfony/symfony": "2.3.*",
+        "opauth/opauth": "*"
+    },
+    "autoload": {
+        "psr-0": { "DCS\\OpauthBundle": "" }
+    },
+    "target-dir": "DCS/OpauthBundle"
+}

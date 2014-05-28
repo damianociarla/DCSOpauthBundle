@@ -1,0 +1,14 @@
+{% extends 'DCSOpauthBundle::layout.html.twig' %}
+
+{% block body %}
+    <dl>
+        <dt>provider</dt>
+        <dd>{{ provider|default('-') }}</dd>
+        <dt>code</dt>
+        <dd>{{ code|default('-') }}</dd>
+        <dt>message</dt>
+        <dd>{{ message|default('-') }}</dd>
+        <dt>raw</dt>
+        <dd><pre>{{ dump(raw) }}</pre></dd>
+    </dl>
+{% endblock body %}
