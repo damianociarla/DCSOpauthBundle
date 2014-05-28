@@ -11,6 +11,14 @@ To install DCSOpauthBundle run the following command
 
 	bash $ php composer.phar require damianociarla/opauth-bundle
 
+### b) Install Opauth strategy
+
+To install the Opauth strategy, you need find the required package on Packagist or on GitHub and add it to the require list of your project's composer.json file.
+
+This is an example of the Facebook strategy:
+
+    bash $ php composer.phar require opauth/facebook
+
 ### b) Enable the bundle
 
 To enable it add the bundle instance in the kernel:
