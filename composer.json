@@ -17,7 +17,7 @@
     "require": {
         "php": ">=5.3",
         "symfony/symfony": "2.3.*",
-        "opauth/opauth": "*"
+        "opauth/opauth": "0.4.4"
     },
     "autoload": {
         "psr-0": { "DCS\\OpauthBundle": "" }
