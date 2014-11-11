@@ -52,15 +52,19 @@ class DCSOpauthExtension extends Extension
                 case 'Behance':
                 case 'Bitly':
                 case 'Do':
+                case 'Dropbox':
                 case 'Evernote':
                 case 'Foursquare':
                 case 'GitHub':
                 case 'Google':
+                case 'Harvest':
                 case 'Instagram':
                 case 'Live':
                 case 'Mixi':
+                case 'Strava':
                 case 'Yahoojp':
                 case 'Yammer':
+                case 'ResourceGuru':
                     $config['client_id'] = $config['id'];
                     $config['client_secret'] = $config['secret'];
                     break;
@@ -73,9 +77,12 @@ class DCSOpauthExtension extends Extension
                     $config['secret'] = $config['secret'];
                     break;
                 case 'Disqus':
-                case 'LinkedIn':
                     $config['api_key'] = $config['id'];
                     $config['api_secret'] = $config['secret'];
+                    break;
+                case 'LinkedIn':
+                    $config['api_key'] = $config['id'];
+                    $config['secret_key'] = $config['secret'];
                     break;
                 case 'Facebook':
                 case 'PayPal':
