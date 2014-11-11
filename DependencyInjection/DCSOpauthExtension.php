@@ -67,6 +67,8 @@ class DCSOpauthExtension extends Extension
                 case 'ResourceGuru':
                     $config['client_id'] = $config['id'];
                     $config['client_secret'] = $config['secret'];
+                    unset($config['id']);
+                    unset($config['secret']);
                     break;
                 case 'Bitbucket':
                 case 'Flickr':
@@ -74,30 +76,35 @@ class DCSOpauthExtension extends Extension
                 case 'Twitter':
                 case 'Vimeo':
                     $config['key'] = $config['id'];
-                    $config['secret'] = $config['secret'];
+                    unset($config['id']);
                     break;
                 case 'Disqus':
                     $config['api_key'] = $config['id'];
                     $config['api_secret'] = $config['secret'];
+                    unset($config['id']);
+                    unset($config['secret']);
                     break;
                 case 'LinkedIn':
                     $config['api_key'] = $config['id'];
                     $config['secret_key'] = $config['secret'];
+                    unset($config['id']);
+                    unset($config['secret']);
                     break;
                 case 'Facebook':
                 case 'PayPal':
                 case 'VKontakte':
                     $config['app_id'] = $config['id'];
                     $config['app_secret'] = $config['secret'];
+                    unset($config['id']);
+                    unset($config['secret']);
                     break;
                 case 'Tumblr':
                     $config['consumer_key'] = $config['id'];
                     $config['consumer_secret'] = $config['secret'];
+                    unset($config['id']);
+                    unset($config['secret']);
                     break;
             }
-            // Remove unused parameters
-            unset($config['id']);
-            unset($config['secret']);
             // Set new configuration
             $strategies[$name] = $config;
         }
