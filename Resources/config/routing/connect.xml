@@ -8,7 +8,7 @@
         <default key="_controller">DCSOpauthBundle:Connect:login</default>
         <default key="strategy"></default>
     </route>
-    <route id="dcs_opauth_connect_callback" pattern="/login/{strategy}/oauth2callback">
+    <route id="dcs_opauth_connect_callback" pattern="/login/{strategy}/{oauthCallbackPath}">
         <default key="_controller">DCSOpauthBundle:Connect:login</default>
     </route>
 </routes>
