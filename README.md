@@ -84,7 +84,7 @@ You must perform a redirect on the route `dcs_opauth_connect` passing the parame
 
     # twig example
 
-    <a href="{{ url('dcs_opauth_connect', {'provider' : 'google'}) }}">Login with Google</a>
+    <a href="{{ path('dcs_opauth_connect', {'strategy' : 'google'}) }}">Login with Google</a>
 
 ## Complete configuration
 
